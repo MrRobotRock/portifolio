@@ -1,0 +1,284 @@
+/* Fonte monoespaçada */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0d0d0d;
+  color: #00ffff;
+  font-family: 'Fira Code', monospace;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Navegação */
+nav {
+  background-color: #121212;
+  padding: 15px 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ffff55;
+  margin-bottom: 30px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav ul.tópicos {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul.tópicos li a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: 600;
+  text-shadow: 0 0 6px #00ffffaa;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav ul.tópicos li a:hover {
+  color: #1bffff;
+  text-shadow: 0 0 15px #1bffff;
+}
+
+/* Seções */
+section {
+  background-color: #1a1a1a;
+  margin-bottom: 40px;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #00ffff44;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section h1, section h2 {
+  color: #00ffff;
+  text-shadow: 0 0 10px #00ffffcc;
+  margin-bottom: 15px;
+}
+
+section p, section label {
+  color: #a0f0f0;
+}
+
+/* Introdução com destaque */
+.intro {
+  font-size: 1.1rem;
+  color: #b0e0e6;
+  text-shadow: 0 0 5px #00ffff66;
+}
+
+/* Skills - barras de progresso */
+.skills {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.skill span {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #00ffffcc;
+  text-shadow: 0 0 6px #00ffffaa;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #222;
+  border-radius: 12px;
+  height: 18px;
+  box-shadow: inset 0 0 8px #00ffff33;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 12px;
+  box-shadow: 0 0 10px inset;
+  animation: pulseGlow 2s infinite alternate;
+}
+
+/* Cores das barras adaptadas */
+.progress:nth-child(1) {
+  background-color: #ff6347; /* tomate */
+}
+.progress:nth-child(2) {
+  background-color: #1e90ff; /* azul dodger */
+}
+.progress:nth-child(3) {
+  background-color: #f0db4f; /* amarelo JS */
+}
+.progress:nth-child(4) {
+  background-color: #2e8b57; /* verde escuro */
+}
+
+/* Animação suave para glow */
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 8px inset;
+  }
+  100% {
+    box-shadow: 0 0 20px inset;
+  }
+}
+
+/* Ícones das redes sociais */
+.icones {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.icones a img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #00ffff88;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.icones a:hover img {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px #00ffff;
+}
+
+/* Depoimentos */
+.depoimento {
+  background: rgba(26, 26, 26, 0.85);
+  padding: 1.2rem;
+  margin: 1rem auto;
+  border-radius: 14px;
+  max-width: 320px;
+  box-shadow: 0 0 15px #00ffff55;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.depoimento:hover {
+  box-shadow: 0 0 25px #00ffffaa;
+}
+
+.depoimento img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  border: 2px solid #00ffff;
+  box-shadow: 0 0 8px #00ffffaa;
+  margin-bottom: 10px;
+}
+
+/* Galeria */
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.galeria-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #00ffff44;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.galeria-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 22px #00ffffaa;
+}
+
+/* Código pré-formatado */
+pre {
+  background-color: #121212;
+  color: #00ffff;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px #00ffffaa;
+  overflow-x: auto;
+}
+
+code {
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Formulário */
+form {
+  max-width: 450px;
+  margin: 0 auto;
+  color: #00ffff;
+}
+
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: 1.5px solid #00ffff;
+  border-radius: 8px;
+  background-color: #121212;
+  color: #00ffff;
+  font-family: 'Fira Code', monospace;
+  font-size: 1rem;
+  transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  box-shadow: 0 0 12px #00ffff;
+  border-color: #00ffff;
+}
+
+button {
+  background-color: #00ffff;
+  color: #121212;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: 'Fira Code', monospace;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #00ffffbb;
+}
+
+button:hover {
+  background-color: #1bffff;
+  box-shadow: 0 0 20px #1bffff;
+}
+
+/* Responsividade básica */
+@media (max-width: 600px) {
+  nav ul.tópicos {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  section {
+    padding: 20px 15px;
+    margin-bottom: 30px;
+  }
+
+  .depoimento {
+    max-width: 100%;
+    margin: 1rem 0;
+  }
+}
